@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Company Homepage</h1>
+
+<p> The current date and time is: {%now "DATE_FORMAT" %}</p>
+<P> There are {{ inventory_list|length }} items of inventory.</P>
+
+<ul> 
+    {% for item in inventory_list %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+<p> {{ greeting | title }}</p>
+{% comment %}
+    This is a comment that will not be rendered in the HTML output.
+{% endcomment %}
+
+{% endblock %}
