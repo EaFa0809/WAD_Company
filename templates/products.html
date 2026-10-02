@@ -5,14 +5,10 @@
 <h1>Company Products Page</h1>
 
 <p>Here are our products:</p>
-
 <ul>
-    <li>{{ product1 }}</li>
-    <li>{{ product2 }}</li>
-    <li>{{ product3 }}</li>
-    <li>{{ product4 }}</li>
-    <li>{{ product5 }}</li>
-    <li>{{ product6 }}</li>
+    {% for item in inventory_list %}
+        <li>{{ item }}</li>
+    {% endfor %}
 </ul>
 
 {% endblock %}

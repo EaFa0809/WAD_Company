@@ -25,11 +25,7 @@ class ProductPageView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["product1"] = "Laptop"
-        context["product2"] = "Smartphone"
-        context["product3"] = "Tablet"
-        context["product4"] = "Keyboard"
-        context["product5"] = "Mouse"
-        context["product6"] = "Monitor"
+
+        context["inventory_list"] = ["Laptop", "Smartphone", "Tablet", "Keyboard", "Mouse", "Monitor", "Printer", "Headphones", "Webcam", "Speakers"]
 
         return context
